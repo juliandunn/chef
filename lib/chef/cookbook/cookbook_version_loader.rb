@@ -106,6 +106,8 @@ class Chef
 
         if File.exists?(File.join(cookbook_path, "metadata.rb"))
           @metadata_filenames << File.join(cookbook_path, "metadata.rb")
+        elsif File.exists?(File.join(cookbook_path, "meatdata.rb"))
+          @metadata_filenames << File.join(cookbook_path, "meatdata.rb")
         elsif File.exists?(File.join(cookbook_path, "metadata.json"))
           @metadata_filenames << File.join(cookbook_path, "metadata.json")
         elsif @uploaded_cookbook_version_file
